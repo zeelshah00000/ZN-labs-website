@@ -4,6 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ZN Labs — Websites that fill the chair. Live in seven days.</title>
+<meta name="description" content="We build the digital front desk for a dental practice: the site, the Google profile and the systems that answer patients when your chair is full. Live in seven days, or the build is free.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ZN Labs">
+<meta property="og:title" content="ZN Labs — Websites that fill the chair. Live in seven days.">
+<meta property="og:description" content="We build the digital front desk for a dental practice: the site, the Google profile and the systems that answer patients when your chair is full. Live in seven days, or the build is free.">
+<meta property="og:image" content="assets/zn-labs-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ZN Labs — Websites that fill the chair. Live in seven days.">
+<meta name="twitter:description" content="We build the digital front desk for a dental practice: the site, the Google profile and the systems that answer patients when your chair is full. Live in seven days, or the build is free.">
+<meta name="twitter:image" content="assets/zn-labs-logo.png">
 <link rel="icon" href="assets/zn-labs-logo.png" type="image/png">
 <script src="./support.js"></script>
 </head>
@@ -177,14 +187,36 @@ a:hover{color:var(--text-link-hover)}
     </div>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--space-6) var(--space-6);margin-top:var(--space-8)">
-      <sc-for list="{{ steps }}" as="step" hint-placeholder-count="5">
-        <div data-reveal="true" style="display:flex;flex-direction:column;gap:10px;padding-top:var(--space-6);border-top:1px solid var(--line-inverse);position:relative">
-          <span style="position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:999px;background:var(--stone-500)"></span>
-          <span style="font:var(--type-mono);color:var(--amber-400)">{{ step.day }}</span>
-          <h4 style="font-family:var(--font-sans);font-size:16px;font-weight:500;color:var(--text-inverse)">{{ step.title }}</h4>
-          <p style="font-family:var(--font-sans);font-size:14px;line-height:var(--lh-body);color:var(--text-inverse-muted)">{{ step.body }}</p>
-        </div>
-      </sc-for>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:10px;padding-top:var(--space-6);border-top:1px solid var(--line-inverse);position:relative">
+        <span style="position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:999px;background:var(--stone-500)"></span>
+        <span style="font:var(--type-mono);color:var(--amber-400)">Day 1</span>
+        <h4 style="font-family:var(--font-sans);font-size:16px;font-weight:500;color:var(--text-inverse)">Blueprint call</h4>
+        <p style="font-family:var(--font-sans);font-size:14px;line-height:var(--lh-body);color:var(--text-inverse-muted)">Thirty minutes, ten questions: your specialities, your patients, your look, your booking flow. The last thing we need from you until preview day.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:10px;padding-top:var(--space-6);border-top:1px solid var(--line-inverse);position:relative">
+        <span style="position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:999px;background:var(--stone-500)"></span>
+        <span style="font:var(--type-mono);color:var(--amber-400)">Days 2–4</span>
+        <h4 style="font-family:var(--font-sans);font-size:16px;font-weight:500;color:var(--text-inverse)">We build</h4>
+        <p style="font-family:var(--font-sans);font-size:14px;line-height:var(--lh-body);color:var(--text-inverse-muted)">Structure, copy, design, mobile first. Nothing needed from your side.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:10px;padding-top:var(--space-6);border-top:1px solid var(--line-inverse);position:relative">
+        <span style="position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:999px;background:var(--stone-500)"></span>
+        <span style="font:var(--type-mono);color:var(--amber-400)">Day 5</span>
+        <h4 style="font-family:var(--font-sans);font-size:16px;font-weight:500;color:var(--text-inverse)">Preview</h4>
+        <p style="font-family:var(--font-sans);font-size:14px;line-height:var(--lh-body);color:var(--text-inverse-muted)">You see the real site on a live link. One consolidated round of changes.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:10px;padding-top:var(--space-6);border-top:1px solid var(--line-inverse);position:relative">
+        <span style="position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:999px;background:var(--stone-500)"></span>
+        <span style="font:var(--type-mono);color:var(--amber-400)">Day 6</span>
+        <h4 style="font-family:var(--font-sans);font-size:16px;font-weight:500;color:var(--text-inverse)">Refine and sync</h4>
+        <p style="font-family:var(--font-sans);font-size:14px;line-height:var(--lh-body);color:var(--text-inverse-muted)">Changes applied. Google Business Profile updated to match: hours, photos, services.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:10px;padding-top:var(--space-6);border-top:1px solid var(--line-inverse);position:relative">
+        <span style="position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:999px;background:var(--stone-500)"></span>
+        <span style="font:var(--type-mono);color:var(--amber-400)">Day 7</span>
+        <h4 style="font-family:var(--font-sans);font-size:16px;font-weight:500;color:var(--text-inverse)">Go live</h4>
+        <p style="font-family:var(--font-sans);font-size:14px;line-height:var(--lh-body);color:var(--text-inverse-muted)">Domain connected, analytics running, logins handed to you, plus a short video showing how to update the basics yourself.</p>
+      </div>
     </div>
 
     <div data-reveal="true" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--space-4) var(--space-8);margin-top:var(--space-8);padding:var(--space-8);border:1px solid var(--line-inverse);border-radius:var(--radius-xl)">
@@ -207,39 +239,93 @@ a:hover{color:var(--text-link-hover)}
       <p style="font-family:var(--font-sans);font-size:15px;color:var(--text-muted);max-width:34ch">All three are live. The frames below are the real sites, loading as you read this.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-8);margin-top:var(--space-12)">
-      <sc-for list="{{ cases }}" as="c" hint-placeholder-count="3">
-        <a href="{{ c.url }}" target="_blank" rel="noopener noreferrer" data-reveal="true" style="grid-column:{{ c.span }};display:flex;flex-direction:column;background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-panel);overflow:hidden;box-shadow:var(--shadow-sm);text-decoration:none;transition:var(--transition-surface)" style-hover="transform:translateY(-3px);box-shadow:var(--shadow-lg)">
-          <div style="display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line-hairline);background:var(--surface-card)">
-            <span style="display:flex;gap:6px">
-              <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
-              <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
-              <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
-            </span>
-            <span style="flex:1;padding:5px 14px;border-radius:var(--radius-pill);background:var(--surface-sunken);font:var(--type-mono);font-size:11px;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ c.host }}</span>
+      <a href="https://dr-soham-website-redesign.vercel.app/" target="_blank" rel="noopener noreferrer" data-reveal="true" style="grid-column:1 / -1;display:flex;flex-direction:column;background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-panel);overflow:hidden;box-shadow:var(--shadow-sm);text-decoration:none;transition:var(--transition-surface)" style-hover="transform:translateY(-3px);box-shadow:var(--shadow-lg)">
+        <div style="display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line-hairline);background:var(--surface-card)">
+          <span style="display:flex;gap:6px">
+            <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+          </span>
+          <span style="flex:1;padding:5px 14px;border-radius:var(--radius-pill);background:var(--surface-sunken);font:var(--type-mono);font-size:11px;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">dr-soham-website-redesign.vercel.app</span>
+        </div>
+        <div style="position:relative;width:100%;aspect-ratio:16 / 10;overflow:hidden;background:var(--surface-sunken)">
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:var(--space-8);background:var(--surface-sunken)">
+            <span style="font:var(--type-display-3);letter-spacing:var(--ls-display);color:var(--text-display)">Dr Soham</span>
+            <span style="font:var(--type-mono);color:var(--text-muted)">Website redesign</span>
           </div>
-          <div ref="{{ c.ref }}" style="position:relative;width:100%;aspect-ratio:16 / 10;overflow:hidden;background:var(--surface-sunken)">
-            <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:var(--space-8);background:var(--surface-sunken)">
-              <span style="font:var(--type-display-3);letter-spacing:var(--ls-display);color:var(--text-display)">{{ c.name }}</span>
-              <span style="font:var(--type-mono);color:var(--text-muted)">{{ c.tagline }}</span>
-            </div>
-            <sc-if value="{{ live }}" hint-placeholder-val="{{ true }}">
-              <iframe src="{{ c.url }}" title="{{ c.name }}" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true" style="{{ c.frameStyle }}"></iframe>
-            </sc-if>
+          <iframe src="https://dr-soham-website-redesign.vercel.app/" title="Dr Soham" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none"></iframe>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4);padding:var(--card-pad-lg)">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--space-4)">
+            <h3 style="font:var(--type-title);letter-spacing:var(--ls-title)">Dr Soham</h3>
+            <span style="font-family:var(--font-sans);font-size:13px;font-weight:500;color:var(--text-accent);white-space:nowrap">View live site ↗</span>
           </div>
-          <div style="display:flex;flex-direction:column;gap:var(--space-4);padding:var(--card-pad-lg)">
-            <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--space-4)">
-              <h3 style="font:var(--type-title);letter-spacing:var(--ls-title)">{{ c.name }}</h3>
-              <span style="font-family:var(--font-sans);font-size:13px;font-weight:500;color:var(--text-accent);white-space:nowrap">View live site ↗</span>
-            </div>
-            <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body);max-width:52ch">{{ c.brief }}</p>
-            <div style="display:flex;flex-wrap:wrap;gap:8px">
-              <sc-for list="{{ c.tags }}" as="tag" hint-placeholder-count="3">
-                <span style="padding:5px 12px;border:1px solid var(--line-soft);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;color:var(--text-muted)">{{ tag }}</span>
-              </sc-for>
-            </div>
+          <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body);max-width:52ch">An existing clinic site that looked dated and read poorly on a phone. Rebuilt for speed, clarity and mobile.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="padding:5px 12px;border:1px solid var(--line-soft);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;color:var(--text-muted)">Redesign</span>
+            <span style="padding:5px 12px;border:1px solid var(--line-soft);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;color:var(--text-muted)">Mobile-first</span>
+            <span style="padding:5px 12px;border:1px solid var(--line-soft);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;color:var(--text-muted)">Speed</span>
           </div>
-        </a>
-      </sc-for>
+        </div>
+      </a>
+      <a href="https://dr-lipsa-website.vercel.app/#home" target="_blank" rel="noopener noreferrer" data-reveal="true" style="display:flex;flex-direction:column;background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-panel);overflow:hidden;box-shadow:var(--shadow-sm);text-decoration:none;transition:var(--transition-surface)" style-hover="transform:translateY(-3px);box-shadow:var(--shadow-lg)">
+        <div style="display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line-hairline);background:var(--surface-card)">
+          <span style="display:flex;gap:6px">
+            <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+          </span>
+          <span style="flex:1;padding:5px 14px;border-radius:var(--radius-pill);background:var(--surface-sunken);font:var(--type-mono);font-size:11px;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">dr-lipsa-website.vercel.app</span>
+        </div>
+        <div style="position:relative;width:100%;aspect-ratio:16 / 10;overflow:hidden;background:var(--surface-sunken)">
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:var(--space-8);background:var(--surface-sunken)">
+            <span style="font:var(--type-display-3);letter-spacing:var(--ls-display);color:var(--text-display)">Dr Lipsa's Dental Clinic</span>
+            <span style="font:var(--type-mono);color:var(--text-muted)">New build</span>
+          </div>
+          <iframe src="https://dr-lipsa-website.vercel.app/#home" title="Dr Lipsa's Dental Clinic" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none"></iframe>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4);padding:var(--card-pad-lg)">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--space-4)">
+            <h3 style="font:var(--type-title);letter-spacing:var(--ls-title)">Dr Lipsa's Dental Clinic</h3>
+            <span style="font-family:var(--font-sans);font-size:13px;font-weight:500;color:var(--text-accent);white-space:nowrap">View live site ↗</span>
+          </div>
+          <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body);max-width:52ch">A clinic with no web presence at all. Built from scratch with treatment pages, clinic hours and direct call and WhatsApp booking.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="padding:5px 12px;border:1px solid var(--line-soft);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;color:var(--text-muted)">New build</span>
+            <span style="padding:5px 12px;border:1px solid var(--line-soft);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;color:var(--text-muted)">Local SEO</span>
+            <span style="padding:5px 12px;border:1px solid var(--line-soft);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;color:var(--text-muted)">WhatsApp booking</span>
+          </div>
+        </div>
+      </a>
+      <a href="https://dent-o-fit.vercel.app/" target="_blank" rel="noopener noreferrer" data-reveal="true" style="display:flex;flex-direction:column;background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-panel);overflow:hidden;box-shadow:var(--shadow-sm);text-decoration:none;transition:var(--transition-surface)" style-hover="transform:translateY(-3px);box-shadow:var(--shadow-lg)">
+        <div style="display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line-hairline);background:var(--surface-card)">
+          <span style="display:flex;gap:6px">
+            <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+          </span>
+          <span style="flex:1;padding:5px 14px;border-radius:var(--radius-pill);background:var(--surface-sunken);font:var(--type-mono);font-size:11px;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">dent-o-fit.vercel.app</span>
+        </div>
+        <div style="position:relative;width:100%;aspect-ratio:16 / 10;overflow:hidden;background:var(--surface-sunken)">
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:var(--space-8);background:var(--surface-sunken)">
+            <span style="font:var(--type-display-3);letter-spacing:var(--ls-display);color:var(--text-display)">Dent-O-Fit</span>
+            <span style="font:var(--type-mono);color:var(--text-muted)">Custom theme and elements</span>
+          </div>
+          <iframe src="https://dent-o-fit.vercel.app/" title="Dent-O-Fit" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none"></iframe>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4);padding:var(--card-pad-lg)">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--space-4)">
+            <h3 style="font:var(--type-title);letter-spacing:var(--ls-title)">Dent-O-Fit</h3>
+            <span style="font-family:var(--font-sans);font-size:13px;font-weight:500;color:var(--text-accent);white-space:nowrap">View live site ↗</span>
+          </div>
+          <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body);max-width:52ch">A custom visual identity and component system for a practice that wanted to look nothing like a template.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="padding:5px 12px;border:1px solid var(--line-soft);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;color:var(--text-muted)">Custom design</span>
+            <span style="padding:5px 12px;border:1px solid var(--line-soft);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;color:var(--text-muted)">Brand system</span>
+            <span style="padding:5px 12px;border:1px solid var(--line-soft);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;color:var(--text-muted)">UI components</span>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -440,7 +526,7 @@ a:hover{color:var(--text-link-hover)}
       </div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);justify-content:space-between;margin-top:var(--space-16);padding-top:var(--space-6);border-top:1px solid var(--line-inverse);font-family:var(--font-sans);font-size:12px;color:var(--text-inverse-muted)">
-      <span>© {{ year }} ZN Labs</span>
+      <span>© <span id="zn-year">2026</span> ZN Labs</span>
       <span>Live in 7 working days, or the build is free.</span>
     </div>
   </div>
@@ -448,13 +534,12 @@ a:hover{color:var(--text-link-hover)}
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;livePreviews&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Work&quot;},&quot;featureFirstCase&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Work&quot;},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;bookingUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;bookingUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
 class Component extends DCLogic {
-  state = { navOpen:false, scales:{}, sent:false, w: typeof window!=='undefined'?window.innerWidth:1280 };
-  frames = [];
+  state = { navOpen:false, sent:false, w: typeof window!=='undefined'?window.innerWidth:1280 };
 
   componentDidMount(){
-    this.onResize = () => { this.setState({ w: window.innerWidth }); this.measure(); this.syncNav(); };
+    this.onResize = () => { this.setState({ w: window.innerWidth }); this.syncNav(); };
     window.addEventListener('resize', this.onResize);
     this.tick();
     this.mo = new MutationObserver(() => { clearTimeout(this._t); this._t = setTimeout(() => this.tick(), 120); });
@@ -468,7 +553,7 @@ class Component extends DCLogic {
     if (this.io) this.io.disconnect();
   }
 
-  tick(){ this.measure(); this.syncNav(); this.setupReveal(); }
+  tick(){ this.syncNav(); this.setupReveal(); }
 
   // Nav: no media queries available in inline styles, so toggle the two nav modes by width.
   syncNav(){
@@ -477,12 +562,6 @@ class Component extends DCLogic {
     document.querySelectorAll('[data-nav-cta]').forEach(el => { el.style.display = wide ? 'inline-flex' : 'none'; });
     document.querySelectorAll('[data-nav-burger]').forEach(el => { el.style.display = wide ? 'none' : 'flex'; });
     if (wide && this.state.navOpen) this.setState({ navOpen:false });
-  }
-
-  measure(){
-    const next = {};
-    this.frames.forEach((el, i) => { if (el && el.clientWidth) next[i] = +(el.clientWidth / 1440).toFixed(4); });
-    if (JSON.stringify(next) !== JSON.stringify(this.state.scales)) this.setState({ scales: next });
   }
 
   setupReveal(){
@@ -505,41 +584,7 @@ class Component extends DCLogic {
   }
 
   renderVals(){
-    const live = this.props.livePreviews ?? true;
-    const feature = this.props.featureFirstCase ?? true;
     const booking = (this.props.bookingUrl ?? '').trim();
-
-    const cases = [
-      { name:'Dr Soham', tagline:'Website redesign', host:'dr-soham-website-redesign.vercel.app',
-        url:'https://dr-soham-website-redesign.vercel.app/',
-        brief:'An existing clinic site that looked dated and read poorly on a phone. Rebuilt for speed, clarity and mobile.',
-        tags:['Redesign','Mobile-first','Speed'] },
-      { name:"Dr Lipsa's Dental Clinic", tagline:'New build', host:'dr-lipsa-website.vercel.app',
-        url:'https://dr-lipsa-website.vercel.app/#home',
-        brief:'A clinic with no web presence at all. Built from scratch with treatment pages, clinic hours and direct call and WhatsApp booking.',
-        tags:['New build','Local SEO','WhatsApp booking'] },
-      { name:'Dent-O-Fit', tagline:'Custom theme and elements', host:'dent-o-fit.vercel.app',
-        url:'https://dent-o-fit.vercel.app/',
-        brief:'A custom visual identity and component system for a practice that wanted to look nothing like a template.',
-        tags:['Custom design','Brand system','UI components'] }
-    ].map((c, i) => ({
-      ...c,
-      span: (feature && i === 0) ? '1 / -1' : 'auto',
-      ref: el => { this.frames[i] = el; },
-      frameStyle: {
-        position:'absolute', top:0, left:0, width:'1440px', height:'900px', border:'0',
-        transform:'scale(' + (this.state.scales[i] || 0.26) + ')', transformOrigin:'top left',
-        pointerEvents:'none', background:'#fff'
-      }
-    }));
-
-    const steps = [
-      { day:'Day 1', title:'Blueprint call', body:'Thirty minutes, ten questions: your specialities, your patients, your look, your booking flow. The last thing we need from you until preview day.' },
-      { day:'Days 2–4', title:'We build', body:'Structure, copy, design, mobile first. Nothing needed from your side.' },
-      { day:'Day 5', title:'Preview', body:'You see the real site on a live link. One consolidated round of changes.' },
-      { day:'Day 6', title:'Refine and sync', body:'Changes applied. Google Business Profile updated to match: hours, photos, services.' },
-      { day:'Day 7', title:'Go live', body:'Domain connected, analytics running, logins handed to you, plus a short video showing how to update the basics yourself.' }
-    ];
 
     const faqs = [
       { question:'Seven days, really?', answer:'Yes. Seven working days from the blueprint call. We write the copy so nothing waits on you. If we miss it, the build is free.' },
@@ -549,8 +594,7 @@ class Component extends DCLogic {
     ];
 
     return {
-      cases, steps, faqs, live,
-      year: new Date().getFullYear(),
+      faqs,
       navOpen: this.state.navOpen,
       burgerIcon: this.state.navOpen ? 'x' : 'menu',
       toggleNav: () => this.setState(s => ({ navOpen: !s.navOpen })),
@@ -563,6 +607,12 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script>
+(function () {
+  var el = document.getElementById('zn-year');
+  if (el) el.textContent = String(new Date().getFullYear());
+})();
 </script>
 </body>
 </html>
