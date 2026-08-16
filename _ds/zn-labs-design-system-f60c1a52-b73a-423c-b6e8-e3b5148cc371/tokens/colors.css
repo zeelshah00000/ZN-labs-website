@@ -1,0 +1,54 @@
+:root{
+/* — Brand — */
+--zn-amber:#FBB315;--zn-ink:#1A1A18;
+
+/* — Amber ramp (single saturated accent) — */
+--amber-50:#FEF7E6;--amber-100:#FDECC2;--amber-200:#FDDD91;--amber-300:#FCCB5C;--amber-400:#FBBE35;--amber-500:#FBB315;--amber-600:#E09A05;--amber-700:#AE7604;--amber-800:#7A5203;
+
+/* — Warm neutral ramp (the canvas of the system) — */
+--stone-0:#FFFFFF;--stone-50:#FAF9F6;--stone-100:#F3F2EE;--stone-200:#E8E6E0;--stone-300:#D5D2C9;--stone-400:#AAA79D;--stone-500:#7D7A71;--stone-600:#56544D;--stone-700:#3A3934;--stone-800:#232320;--stone-900:#151513;
+
+/* — Muted semantics (never neon) — */
+--green-500:#2F7A5B;--green-50:#EAF2ED;--terracotta-500:#A8412D;--terracotta-50:#F7EAE7;--slate-500:#3F5A7A;--slate-50:#EBEFF4;
+
+/* — Semantic surfaces — */
+--surface-canvas:var(--stone-50);
+--surface-card:var(--stone-0);
+--surface-sunken:var(--stone-100);
+--surface-inverse:var(--zn-ink);
+--surface-accent:var(--zn-amber);
+--surface-accent-soft:var(--amber-50);
+--surface-veil:rgba(255,255,255,.72);
+--surface-veil-dark:rgba(21,21,19,.56);
+
+/* — Semantic text — */
+--text-display:var(--zn-ink);
+--text-body:var(--stone-700);
+--text-muted:var(--stone-500);
+--text-faint:var(--stone-400);
+--text-inverse:var(--stone-50);
+--text-inverse-muted:rgba(250,249,246,.62);
+--text-accent:var(--amber-700);
+--text-link:var(--zn-ink);
+--text-link-hover:var(--amber-700);
+
+/* — Semantic lines — */
+--line-hairline:rgba(26,26,24,.08);
+--line-soft:var(--stone-200);
+--line-strong:var(--stone-300);
+--line-inverse:rgba(250,249,246,.16);
+--line-focus:var(--zn-ink);
+
+/* — Status — */
+--status-success-fg:var(--green-500);--status-success-bg:var(--green-50);
+--status-warning-fg:var(--amber-700);--status-warning-bg:var(--amber-50);
+--status-danger-fg:var(--terracotta-500);--status-danger-bg:var(--terracotta-50);
+--status-info-fg:var(--slate-500);--status-info-bg:var(--slate-50);
+
+/* — Signature gradients (used full-bleed or inside a large-radius panel) — */
+--gradient-dusk:linear-gradient(180deg,#151513 0%,#2C2A25 42%,#7A7367 78%,#D9D4C7 100%); /* @kind color */
+--gradient-ember:linear-gradient(180deg,#151513 0%,#3A2E17 46%,#B7861B 82%,#FBD98A 100%); /* @kind color */
+--gradient-daylight:linear-gradient(180deg,#FBB315 0%,#FDDD91 38%,#FAF9F6 100%); /* @kind color */
+--gradient-halo:radial-gradient(60% 60% at 50% 40%,rgba(251,179,21,.18) 0%,rgba(250,249,246,0) 70%); /* @kind color */
+--gradient-protect-bottom:linear-gradient(180deg,rgba(21,21,19,0) 0%,rgba(21,21,19,.62) 100%); /* @kind color */
+}

@@ -1,0 +1,15 @@
+:root{
+/* warm, low-alpha, no black — light comes from directly above */
+--shadow-none:none;
+--shadow-hairline:0 0 0 1px var(--line-hairline);
+--shadow-xs:0 1px 2px rgba(26,26,24,.05);
+--shadow-sm:0 2px 8px rgba(26,26,24,.05),0 0 0 1px rgba(26,26,24,.04);
+--shadow-md:0 8px 24px rgba(26,26,24,.07),0 0 0 1px rgba(26,26,24,.04);
+--shadow-lg:0 18px 48px rgba(26,26,24,.09),0 0 0 1px rgba(26,26,24,.04);
+--shadow-float:0 10px 34px rgba(26,26,24,.10); /* capsule nav, floating cards */
+--shadow-inset-hairline:inset 0 0 0 1px var(--line-hairline);
+--shadow-inset-press:inset 0 1px 2px rgba(26,26,24,.14);
+--shadow-focus:0 0 0 2px var(--surface-canvas),0 0 0 4px var(--zn-ink);
+--blur-veil:blur(18px); /* @kind other */
+--blur-veil-strong:blur(28px); /* @kind other */
+}

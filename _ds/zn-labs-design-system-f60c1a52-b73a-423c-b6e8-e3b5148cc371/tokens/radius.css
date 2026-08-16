@@ -1,0 +1,18 @@
+:root{
+--radius-none:0px;
+--radius-xs:4px;
+--radius-sm:8px;
+--radius-md:12px;
+--radius-lg:16px;
+--radius-xl:24px;
+--radius-2xl:32px;
+--radius-panel:36px; /* the large hero / feature panel */
+--radius-pill:999px;
+/* roles */
+--radius-button:var(--radius-pill);
+--radius-input:var(--radius-pill);
+--radius-card:var(--radius-xl);
+--radius-media:var(--radius-lg);
+--radius-chip:var(--radius-pill);
+--radius-sheet:var(--radius-2xl);
+}

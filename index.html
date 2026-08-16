@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZN Labs — Websites that fill the chair. Live in seven days.</title>
+<link rel="icon" href="assets/zn-labs-logo.png" type="image/png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/zn-labs-design-system-f60c1a52-b73a-423c-b6e8-e3b5148cc371/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/zn-labs-design-system-f60c1a52-b73a-423c-b6e8-e3b5148cc371/tokens/colors.css">
+<link rel="stylesheet" href="_ds/zn-labs-design-system-f60c1a52-b73a-423c-b6e8-e3b5148cc371/tokens/typography.css">
+<link rel="stylesheet" href="_ds/zn-labs-design-system-f60c1a52-b73a-423c-b6e8-e3b5148cc371/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/zn-labs-design-system-f60c1a52-b73a-423c-b6e8-e3b5148cc371/tokens/radius.css">
+<link rel="stylesheet" href="_ds/zn-labs-design-system-f60c1a52-b73a-423c-b6e8-e3b5148cc371/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/zn-labs-design-system-f60c1a52-b73a-423c-b6e8-e3b5148cc371/tokens/motion.css">
+<link rel="stylesheet" href="_ds/zn-labs-design-system-f60c1a52-b73a-423c-b6e8-e3b5148cc371/tokens/base.css">
+<link rel="stylesheet" href="_ds/zn-labs-design-system-f60c1a52-b73a-423c-b6e8-e3b5148cc371/styles.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+<script src="_ds/zn-labs-design-system-f60c1a52-b73a-423c-b6e8-e3b5148cc371/_ds_bundle.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{background:var(--surface-canvas)}
+[id]{scroll-margin-top:112px}
+a{color:var(--text-link)}
+a:hover{color:var(--text-link-hover)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</helmet>
+
+<div style="background:var(--surface-canvas);font:var(--type-body);color:var(--text-body);overflow-x:hidden">
+
+<div style="position:sticky;top:16px;z-index:40;display:flex;flex-direction:column;align-items:center;width:100%;padding:16px var(--gutter) 0">
+  <nav style="display:flex;align-items:center;gap:var(--space-8);width:100%;max-width:var(--container-max);height:68px;padding:0 10px 0 22px;background:var(--surface-veil);backdrop-filter:var(--blur-veil);-webkit-backdrop-filter:var(--blur-veil);border:1px solid var(--line-hairline);border-radius:var(--radius-pill);box-shadow:var(--shadow-float)">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;flex:0 0 auto;text-decoration:none">
+      <img src="assets/zn-labs-logo.png" alt="ZN Labs" style="height:26px;width:auto">
+    </a>
+    <span style="display:none;align-items:center;gap:var(--space-8);margin:0 auto" data-nav-links="true">
+      <a href="#work" style="font-family:var(--font-sans);font-size:12px;font-weight:500;letter-spacing:var(--ls-nav);text-transform:uppercase;color:var(--text-muted);text-decoration:none" style-hover="color:var(--text-display)">Work</a>
+      <a href="#process" style="font-family:var(--font-sans);font-size:12px;font-weight:500;letter-spacing:var(--ls-nav);text-transform:uppercase;color:var(--text-muted);text-decoration:none" style-hover="color:var(--text-display)">Process</a>
+      <a href="#pricing" style="font-family:var(--font-sans);font-size:12px;font-weight:500;letter-spacing:var(--ls-nav);text-transform:uppercase;color:var(--text-muted);text-decoration:none" style-hover="color:var(--text-display)">Pricing</a>
+      <a href="#about" style="font-family:var(--font-sans);font-size:12px;font-weight:500;letter-spacing:var(--ls-nav);text-transform:uppercase;color:var(--text-muted);text-decoration:none" style-hover="color:var(--text-display)">About</a>
+    </span>
+    <span style="margin-left:auto;display:flex;align-items:center;gap:8px;flex:0 0 auto">
+      <span data-nav-cta="true" style="display:none">
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Button" variant="accent" href="#contact" hint-size="120px,44px">Free audit</x-import>
+      </span>
+      <button type="button" aria-label="Menu" onClick="{{ toggleNav }}" data-nav-burger="true" style="display:flex;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid var(--line-hairline);border-radius:var(--radius-pill);background:var(--surface-card);color:var(--text-display);cursor:pointer">
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="{{ burgerIcon }}" size="{{ eighteen }}" hint-size="18px,18px"></x-import>
+      </button>
+    </span>
+  </nav>
+  <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="width:100%;max-width:var(--container-max);margin-top:8px;padding:var(--space-6);background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);display:flex;flex-direction:column;gap:var(--space-2)">
+      <a href="#work" onClick="{{ closeNav }}" style="padding:12px 4px;font-family:var(--font-sans);font-size:15px;color:var(--text-display);text-decoration:none;border-bottom:1px solid var(--line-hairline)">Work</a>
+      <a href="#process" onClick="{{ closeNav }}" style="padding:12px 4px;font-family:var(--font-sans);font-size:15px;color:var(--text-display);text-decoration:none;border-bottom:1px solid var(--line-hairline)">Process</a>
+      <a href="#pricing" onClick="{{ closeNav }}" style="padding:12px 4px;font-family:var(--font-sans);font-size:15px;color:var(--text-display);text-decoration:none;border-bottom:1px solid var(--line-hairline)">Pricing</a>
+      <a href="#about" onClick="{{ closeNav }}" style="padding:12px 4px;font-family:var(--font-sans);font-size:15px;color:var(--text-display);text-decoration:none;border-bottom:1px solid var(--line-hairline)">About</a>
+      <a href="#contact" onClick="{{ closeNav }}" style="margin-top:8px;padding:14px 4px;text-align:center;font-family:var(--font-sans);font-size:15px;font-weight:500;color:var(--zn-ink);background:var(--surface-accent);border-radius:var(--radius-pill);text-decoration:none">Get a free clinic audit</a>
+    </div>
+  </sc-if>
+</div>
+
+<section id="top" style="position:relative;padding:clamp(56px,7vw,96px) 0 clamp(64px,8vw,112px)">
+  <div style="position:absolute;inset:0;background:var(--gradient-halo);pointer-events:none"></div>
+  <div class="zn-container" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--space-8);min-height:70vh;justify-content:center">
+    <span class="zn-eyebrow" data-reveal="true">Mumbai · Tech partner for dental clinics</span>
+    <h1 data-reveal="true" style="max-width:16ch;margin:0">Websites that fill the chair. Live in seven days.</h1>
+    <p data-reveal="true" style="max-width:56ch;font:var(--type-body-lg);color:var(--text-body)">We build the digital front desk for a dental practice: the site, the Google profile and the systems that answer patients when your chair is full. Then we stay on and run it.</p>
+    <div data-reveal="true" style="display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-3)">
+      <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Button" variant="accent" size="lg" href="#contact" hint-size="230px,52px">Get a free clinic audit</x-import>
+      <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Button" variant="secondary" size="lg" href="#work" hint-size="150px,52px">See our work</x-import>
+    </div>
+    <p data-reveal="true" style="font:var(--type-mono);color:var(--text-muted);letter-spacing:0.02em">Seven working days from kickoff. Miss it and the build is free.</p>
+  </div>
+  <div class="zn-container" style="position:relative;margin-top:clamp(40px,6vw,72px)">
+    <div data-reveal="true" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line-hairline);border:1px solid var(--line-hairline);border-radius:var(--radius-xl);overflow:hidden">
+      <div style="background:var(--surface-canvas);padding:var(--space-6) var(--space-6) var(--space-8)">
+        <div style="font:var(--type-mono);color:var(--text-accent);margin-bottom:8px">01</div>
+        <div style="font-family:var(--font-sans);font-size:15px;font-weight:500;color:var(--text-display)">Live in 7 days, or free</div>
+      </div>
+      <div style="background:var(--surface-canvas);padding:var(--space-6) var(--space-6) var(--space-8)">
+        <div style="font:var(--type-mono);color:var(--text-accent);margin-bottom:8px">02</div>
+        <div style="font-family:var(--font-sans);font-size:15px;font-weight:500;color:var(--text-display)">Dental clinics only</div>
+      </div>
+      <div style="background:var(--surface-canvas);padding:var(--space-6) var(--space-6) var(--space-8)">
+        <div style="font:var(--type-mono);color:var(--text-accent);margin-bottom:8px">03</div>
+        <div style="font-family:var(--font-sans);font-size:15px;font-weight:500;color:var(--text-display)">You write nothing</div>
+      </div>
+      <div style="background:var(--surface-canvas);padding:var(--space-6) var(--space-6) var(--space-8)">
+        <div style="font:var(--type-mono);color:var(--text-accent);margin-bottom:8px">04</div>
+        <div style="font-family:var(--font-sans);font-size:15px;font-weight:500;color:var(--text-display)">Google profile included</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--surface-sunken);padding:clamp(56px,7vw,96px) 0">
+  <div class="zn-container">
+    <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-4);max-width:720px">
+      <span class="zn-eyebrow">What it costs you</span>
+      <h2 style="max-width:18ch">Most clinics lose patients before anyone picks up the phone.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-8);margin-top:var(--space-12)">
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:12px;padding-top:var(--space-5);border-top:1px solid var(--line-strong)">
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="phone-off" size="{{ twenty }}" hint-size="20px,20px"></x-import>
+        <p style="font-family:var(--font-sans);font-size:15px;color:var(--text-body);max-width:30ch">The phone rings out while you are mid-procedure. Nobody calls back.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:12px;padding-top:var(--space-5);border-top:1px solid var(--line-strong)">
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="map-pin" size="{{ twenty }}" hint-size="20px,20px"></x-import>
+        <p style="font-family:var(--font-sans);font-size:15px;color:var(--text-body);max-width:30ch">The Google listing is unclaimed, with old hours and four reviews.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:12px;padding-top:var(--space-5);border-top:1px solid var(--line-strong)">
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="smartphone" size="{{ twenty }}" hint-size="20px,20px"></x-import>
+        <p style="font-family:var(--font-sans);font-size:15px;color:var(--text-body);max-width:30ch">The site breaks on a phone, which is where every patient looks.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:12px;padding-top:var(--space-5);border-top:1px solid var(--line-strong)">
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="arrow-up-right" size="{{ twenty }}" hint-size="20px,20px"></x-import>
+        <p style="font-family:var(--font-sans);font-size:15px;color:var(--text-body);max-width:30ch">The clinic two streets away gets the appointment instead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="padding:clamp(56px,7vw,96px) 0">
+  <div class="zn-container">
+    <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-4);max-width:720px">
+      <span class="zn-eyebrow">What we build</span>
+      <h2 style="max-width:16ch">Two things at launch. Two more once you are running.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--space-6);margin-top:var(--space-12)">
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-4);padding:var(--card-pad-lg);background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-card);box-shadow:var(--shadow-sm);transition:var(--transition-surface)" style-hover="transform:translateY(-2px);box-shadow:var(--shadow-md)">
+        <span style="font:var(--type-mono);color:var(--text-accent)">01</span>
+        <h3 style="font:var(--type-title);letter-spacing:var(--ls-title)">Clinic websites</h3>
+        <p style="font-family:var(--font-sans);font-size:16px;line-height:var(--lh-body);color:var(--text-body);max-width:38ch">Fast, mobile-first sites built to turn a search into a booked appointment. Live in seven days.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-4);padding:var(--card-pad-lg);background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-card);box-shadow:var(--shadow-sm);transition:var(--transition-surface)" style-hover="transform:translateY(-2px);box-shadow:var(--shadow-md)">
+        <span style="font:var(--type-mono);color:var(--text-accent)">02</span>
+        <h3 style="font:var(--type-title);letter-spacing:var(--ls-title)">Google Business Profile</h3>
+        <p style="font-family:var(--font-sans);font-size:16px;line-height:var(--lh-body);color:var(--text-body);max-width:38ch">Photos, hours, services, treatment descriptions and a review flow, so you show up when a patient searches nearby.</p>
+      </div>
+    </div>
+    <div data-reveal="true" style="display:flex;align-items:center;gap:var(--space-4);margin-top:var(--space-12)">
+      <span class="zn-eyebrow">After launch</span>
+      <span style="flex:1;height:1px;background:var(--line-hairline)"></span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-6);margin-top:var(--space-6)">
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:12px;padding:var(--card-pad);background:var(--surface-sunken);border-radius:var(--radius-card)">
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="message-circle" size="{{ twenty }}" hint-size="20px,20px"></x-import>
+        <h4 style="font-family:var(--font-sans);font-size:17px;font-weight:500;color:var(--text-display)">WhatsApp automation</h4>
+        <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body);max-width:40ch">Instant replies, confirmations and reminders, so nobody waits for the front desk to be free.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:12px;padding:var(--card-pad);background:var(--surface-sunken);border-radius:var(--radius-card)">
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="phone-call" size="{{ twenty }}" hint-size="20px,20px"></x-import>
+        <h4 style="font-family:var(--font-sans);font-size:17px;font-weight:500;color:var(--text-display)">Voice AI agents</h4>
+        <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body);max-width:40ch">Answers the calls you miss while you are with a patient, and books the appointment instead of losing it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="background:var(--surface-inverse);padding:clamp(64px,8vw,128px) 0">
+  <div class="zn-container">
+    <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-4);max-width:760px">
+      <span class="zn-eyebrow" style="color:var(--amber-400)">The ZN 7-Day Practice Launch</span>
+      <h2 style="color:var(--text-inverse);max-width:16ch">A named system, not a promise to get back to you.</h2>
+      <p style="font:var(--type-body-lg);color:var(--text-inverse-muted);max-width:52ch">Four touchpoints from your side. Everything else runs on our clock.</p>
+    </div>
+
+    <div data-reveal="true" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--space-4) var(--space-8);margin-top:var(--space-16);padding:var(--space-8);border:1px solid var(--amber-800);border-radius:var(--radius-xl);background:rgba(251,179,21,.06)">
+      <span style="font:var(--type-mono);color:var(--amber-400);min-width:88px">Day 0</span>
+      <h3 style="font:var(--type-title);color:var(--text-inverse);flex:0 0 auto">Clinic audit, free</h3>
+      <p style="flex:1 1 320px;font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-inverse-muted)">We review your Google profile, your current site and your two closest competitors, then send a one-page breakdown of what is costing you patients. No obligation.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--space-6) var(--space-6);margin-top:var(--space-8)">
+      <sc-for list="{{ steps }}" as="step" hint-placeholder-count="5">
+        <div data-reveal="true" style="display:flex;flex-direction:column;gap:10px;padding-top:var(--space-6);border-top:1px solid var(--line-inverse);position:relative">
+          <span style="position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:999px;background:var(--stone-500)"></span>
+          <span style="font:var(--type-mono);color:var(--amber-400)">{{ step.day }}</span>
+          <h4 style="font-family:var(--font-sans);font-size:16px;font-weight:500;color:var(--text-inverse)">{{ step.title }}</h4>
+          <p style="font-family:var(--font-sans);font-size:14px;line-height:var(--lh-body);color:var(--text-inverse-muted)">{{ step.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+
+    <div data-reveal="true" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--space-4) var(--space-8);margin-top:var(--space-8);padding:var(--space-8);border:1px solid var(--line-inverse);border-radius:var(--radius-xl)">
+      <span style="font:var(--type-mono);color:var(--amber-400);min-width:88px">Day 30</span>
+      <h3 style="font:var(--type-title);color:var(--text-inverse);flex:0 0 auto">Growth review</h3>
+      <p style="flex:1 1 320px;font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-inverse-muted)">We come back with the numbers: visits, calls, enquiries. Then we talk about what is next.</p>
+    </div>
+
+    <p data-reveal="true" style="margin-top:var(--space-8);font-family:var(--font-sans);font-size:14px;color:var(--text-inverse-muted)">Seven working days from kickoff. The clock pauses only if preview feedback is delayed.</p>
+  </div>
+</section>
+
+<section id="work" style="padding:clamp(64px,8vw,128px) 0">
+  <div class="zn-container">
+    <div data-reveal="true" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--space-6)">
+      <div style="display:flex;flex-direction:column;gap:var(--space-4);max-width:640px">
+        <span class="zn-eyebrow">Selected work</span>
+        <h2 style="max-width:14ch">Three clinics, three different problems.</h2>
+      </div>
+      <p style="font-family:var(--font-sans);font-size:15px;color:var(--text-muted);max-width:34ch">All three are live. The frames below are the real sites, loading as you read this.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-8);margin-top:var(--space-12)">
+      <sc-for list="{{ cases }}" as="c" hint-placeholder-count="3">
+        <a href="{{ c.url }}" target="_blank" rel="noopener noreferrer" data-reveal="true" style="grid-column:{{ c.span }};display:flex;flex-direction:column;background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-panel);overflow:hidden;box-shadow:var(--shadow-sm);text-decoration:none;transition:var(--transition-surface)" style-hover="transform:translateY(-3px);box-shadow:var(--shadow-lg)">
+          <div style="display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line-hairline);background:var(--surface-card)">
+            <span style="display:flex;gap:6px">
+              <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+              <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+              <span style="width:9px;height:9px;border-radius:999px;background:var(--stone-300)"></span>
+            </span>
+            <span style="flex:1;padding:5px 14px;border-radius:var(--radius-pill);background:var(--surface-sunken);font:var(--type-mono);font-size:11px;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ c.host }}</span>
+          </div>
+          <div ref="{{ c.ref }}" style="position:relative;width:100%;aspect-ratio:16 / 10;overflow:hidden;background:var(--surface-sunken)">
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:var(--space-8);background:var(--surface-sunken)">
+              <span style="font:var(--type-display-3);letter-spacing:var(--ls-display);color:var(--text-display)">{{ c.name }}</span>
+              <span style="font:var(--type-mono);color:var(--text-muted)">{{ c.tagline }}</span>
+            </div>
+            <sc-if value="{{ live }}" hint-placeholder-val="{{ true }}">
+              <iframe src="{{ c.url }}" title="{{ c.name }}" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true" style="{{ c.frameStyle }}"></iframe>
+            </sc-if>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-4);padding:var(--card-pad-lg)">
+            <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--space-4)">
+              <h3 style="font:var(--type-title);letter-spacing:var(--ls-title)">{{ c.name }}</h3>
+              <span style="font-family:var(--font-sans);font-size:13px;font-weight:500;color:var(--text-accent);white-space:nowrap">View live site ↗</span>
+            </div>
+            <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body);max-width:52ch">{{ c.brief }}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ c.tags }}" as="tag" hint-placeholder-count="3">
+                <span style="padding:5px 12px;border:1px solid var(--line-soft);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;color:var(--text-muted)">{{ tag }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--surface-sunken);padding:clamp(56px,7vw,96px) 0">
+  <div class="zn-container">
+    <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-4);max-width:720px">
+      <span class="zn-eyebrow">Why ZN Labs</span>
+      <h2 style="max-width:16ch">Four reasons a clinic picks us over a freelancer.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--space-10) var(--space-8);margin-top:var(--space-12)">
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:var(--type-mono);color:var(--text-accent)">01</span>
+        <h3 style="font:var(--type-title);letter-spacing:var(--ls-title)">Live in 7 days, or you don't pay</h3>
+        <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body);max-width:34ch">A working, mobile-first clinic site in seven working days from kickoff. Miss the deadline and the build is free.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:var(--type-mono);color:var(--text-accent)">02</span>
+        <h3 style="font:var(--type-title);letter-spacing:var(--ls-title)">We only do dental</h3>
+        <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body);max-width:34ch">Treatment pages, before and after galleries, WhatsApp booking, doctor credentials. A generalist figures that out on your budget.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:var(--type-mono);color:var(--text-accent)">03</span>
+        <h3 style="font:var(--type-title);letter-spacing:var(--ls-title)">You don't write a word</h3>
+        <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body);max-width:34ch">Most clinic sites stall because the copy never arrives. We write it from one 30-minute call and hand it back for approval.</p>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:var(--type-mono);color:var(--text-accent)">04</span>
+        <h3 style="font:var(--type-title);letter-spacing:var(--ls-title)">Found, not just seen</h3>
+        <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body);max-width:34ch">The site is the storefront. Your Google profile is the street it sits on. We set up both, so a nearby search lands somewhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="padding:clamp(64px,8vw,128px) 0">
+  <div class="zn-container">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-16);align-items:center">
+      <div data-reveal="true" style="position:relative;aspect-ratio:4 / 5;border-radius:var(--radius-panel);background:var(--stone-100);border:1px solid var(--line-hairline);overflow:hidden">
+        <img src="assets/zeel-shah.png" alt="Zeel Shah, founder of ZN Labs" style="width:100%;height:100%;object-fit:cover;object-position:50% 12%">
+        <span style="position:absolute;left:var(--space-6);bottom:var(--space-6);padding:8px 16px;border-radius:var(--radius-pill);background:var(--surface-veil);backdrop-filter:var(--blur-veil);-webkit-backdrop-filter:var(--blur-veil);font:var(--type-mono);font-size:12px;color:var(--text-display)">Zeel Shah · Founder</span>
+      </div>
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-6)">
+        <span class="zn-eyebrow">Who you work with</span>
+        <h2 style="max-width:14ch">You talk to the person writing the code.</h2>
+        <p style="font:var(--type-body-lg);color:var(--text-body);max-width:52ch">I studied economics at IIT Bombay with a minor in machine learning and data science, then spent three years working in healthcare. Long enough to see how a clinic actually runs: the phone going unanswered at 6pm, the front desk holding everything together. I build the sites myself and I have shipped several live. No account manager in between, no brief lost in translation. That is the whole reason ZN Labs exists.</p>
+        <p style="font-family:var(--font-sans);font-size:14px;color:var(--text-muted)">Zeel Shah, Founder, ZN Labs</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="background:var(--surface-sunken);padding:clamp(64px,8vw,128px) 0">
+  <div class="zn-container">
+    <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-4);max-width:720px">
+      <span class="zn-eyebrow">Pricing</span>
+      <h2 style="max-width:16ch">One price, agreed before we start.</h2>
+      <p style="font:var(--type-body-lg);color:var(--text-body);max-width:52ch">Every clinic is a different size, so the number comes with your free audit. Fixed and written down before any work begins. No hourly billing, no scope creep.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:var(--space-6);margin-top:var(--space-12);align-items:start">
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-6);padding:var(--card-pad-lg);background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-card);box-shadow:var(--shadow-sm)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <span class="zn-eyebrow">Starter</span>
+          <span style="font-family:var(--font-display);font-weight:300;font-size:40px;line-height:1.1;letter-spacing:var(--ls-display);color:var(--text-display)">On request</span>
+        </div>
+        <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body)">Mobile-first clinic website, up to 5 sections, copywriting included, call and WhatsApp booking. Live in 7 days.</p>
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Button" variant="secondary" href="#contact" full-width="{{ yes }}" hint-size="100%,44px">Get a free audit</x-import>
+      </div>
+
+      <div data-reveal="true" style="position:relative;display:flex;flex-direction:column;gap:var(--space-6);padding:var(--card-pad-lg);background:var(--surface-inverse);border:1px solid var(--zn-ink);border-radius:var(--radius-card);box-shadow:var(--shadow-lg)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <span style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3);justify-content:space-between">
+            <span class="zn-eyebrow" style="color:var(--amber-400)">Practice Growth</span>
+            <span style="padding:5px 12px;border-radius:var(--radius-pill);background:var(--surface-accent);font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--zn-ink);white-space:nowrap">Most clinics</span>
+          </span>
+          <span style="font-family:var(--font-display);font-weight:300;font-size:40px;line-height:1.1;letter-spacing:var(--ls-display);color:var(--text-inverse)">On request</span>
+        </div>
+        <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-inverse-muted)">Everything in Starter, plus treatment-specific pages, full Google Business Profile setup, WhatsApp booking automation and a 30-day growth review.</p>
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Button" variant="accent" href="#contact" full-width="{{ yes }}" hint-size="100%,44px">Get a free audit</x-import>
+      </div>
+
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-6);padding:var(--card-pad-lg);background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-card);box-shadow:var(--shadow-sm)">
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <span class="zn-eyebrow">Multi-Clinic</span>
+          <span style="font-family:var(--font-display);font-weight:300;font-size:40px;line-height:1.1;letter-spacing:var(--ls-display);color:var(--text-display)">On request</span>
+        </div>
+        <p style="font-family:var(--font-sans);font-size:15px;line-height:var(--lh-body);color:var(--text-body)">For multi-location and cosmetic practices. Everything in Growth, plus per-location pages, a custom design system and voice AI call handling.</p>
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Button" variant="secondary" href="#contact" full-width="{{ yes }}" hint-size="100%,44px">Get a free audit</x-import>
+      </div>
+    </div>
+    <p data-reveal="true" style="margin-top:var(--space-8);font-family:var(--font-sans);font-size:14px;color:var(--text-muted)">Maintenance, hosting and updates are quoted monthly with your plan. First month included.</p>
+  </div>
+</section>
+
+<section id="faq" style="padding:clamp(64px,8vw,128px) 0">
+  <div class="zn-container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-16);align-items:start">
+    <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <span class="zn-eyebrow">Questions</span>
+      <h2 style="max-width:12ch">The four we always get.</h2>
+    </div>
+    <div data-reveal="true">
+      <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Accordion" items="{{ faqs }}" hint-size="100%,320px"></x-import>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--surface-sunken);padding:clamp(64px,8vw,128px) 0">
+  <div class="zn-container">
+    <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-4);max-width:720px">
+      <span class="zn-eyebrow">Free clinic audit</span>
+      <h2 style="max-width:18ch">Tell us the clinic. We will tell you what is costing you patients.</h2>
+      <p style="font:var(--type-body-lg);color:var(--text-body);max-width:52ch">One page, no obligation: your Google profile, your current site and your two closest competitors.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-8);margin-top:var(--space-12);align-items:start">
+      <div data-reveal="true" style="display:flex;flex-direction:column;gap:var(--space-3)">
+        <a href="tel:+919328548450" style="display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-6);background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-card);text-decoration:none;transition:var(--transition-surface)" style-hover="transform:translateY(-2px);box-shadow:var(--shadow-md)">
+          <span style="display:flex;flex-direction:column;gap:4px">
+            <span class="zn-eyebrow">Call</span>
+            <span style="font:var(--type-mono);font-size:16px;color:var(--text-display)">+91 93285 48450</span>
+          </span>
+          <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="phone" size="{{ eighteen }}" hint-size="18px,18px"></x-import>
+        </a>
+        <a href="https://wa.me/919328548450?text=Hi%2C%20I%27d%20like%20a%20free%20audit%20for%20my%20clinic" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-6);background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-card);text-decoration:none;transition:var(--transition-surface)" style-hover="transform:translateY(-2px);box-shadow:var(--shadow-md)">
+          <span style="display:flex;flex-direction:column;gap:4px">
+            <span class="zn-eyebrow">WhatsApp</span>
+            <span style="font:var(--type-mono);font-size:16px;color:var(--text-display)">Message us now</span>
+          </span>
+          <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="message-circle" size="{{ eighteen }}" hint-size="18px,18px"></x-import>
+        </a>
+        <a href="mailto:zeel.znlabs@gmail.com?subject=Free%20clinic%20audit" style="display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-6);background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-card);text-decoration:none;transition:var(--transition-surface)" style-hover="transform:translateY(-2px);box-shadow:var(--shadow-md)">
+          <span style="display:flex;flex-direction:column;gap:4px">
+            <span class="zn-eyebrow">Email</span>
+            <span style="font:var(--type-mono);font-size:16px;color:var(--text-display)">zeel.znlabs@gmail.com</span>
+          </span>
+          <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="mail" size="{{ eighteen }}" hint-size="18px,18px"></x-import>
+        </a>
+        <div style="margin-top:var(--space-2)">
+          <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Button" variant="primary" size="lg" href="{{ bookingHref }}" target="_blank" rel="noopener noreferrer" full-width="{{ yes }}" hint-size="100%,52px">Book a 30-minute call</x-import>
+        </div>
+        <p style="font-family:var(--font-sans);font-size:13px;color:var(--text-muted)">Mumbai, India. Working with clinics across the country.</p>
+      </div>
+
+      <div data-reveal="true" style="padding:var(--card-pad-lg);background:var(--surface-card);border:1px solid var(--line-hairline);border-radius:var(--radius-card);box-shadow:var(--shadow-sm)">
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-8) 0;text-align:center;align-items:center">
+            <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="check" size="{{ twentyeight }}" hint-size="28px,28px"></x-import>
+            <h3 style="font:var(--type-title)">Got it. We will be in touch.</h3>
+            <p style="font-family:var(--font-sans);font-size:15px;color:var(--text-body);max-width:36ch">Your audit lands within two working days. If it is urgent, WhatsApp is faster.</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:var(--space-5)">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-5)">
+              <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Input" label="Your name" name="name" placeholder="Dr Soham Rao" required="{{ yes }}" hint-size="100%,72px"></x-import>
+              <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Input" label="Clinic name" name="clinic" placeholder="Smile Dental Care" required="{{ yes }}" hint-size="100%,72px"></x-import>
+              <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Input" label="City" name="city" placeholder="Mumbai" required="{{ yes }}" hint-size="100%,72px"></x-import>
+              <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Input" label="Phone" name="phone" type="tel" placeholder="+91" required="{{ yes }}" hint-size="100%,72px"></x-import>
+            </div>
+            <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Textarea" label="What's the main problem right now?" name="problem" rows="{{ four }}" placeholder="Missed calls, no website, patients booking elsewhere" hint-size="100%,140px"></x-import>
+            <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Button" variant="accent" size="lg" type="submit" full-width="{{ yes }}" hint-size="100%,52px">Get a free clinic audit</x-import>
+            <p style="font-family:var(--font-sans);font-size:13px;color:var(--text-muted)">We reply within two working days. No mailing list.</p>
+          </form>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--surface-inverse);padding:clamp(56px,7vw,96px) 0 var(--space-10)">
+  <div class="zn-container">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-12)">
+      <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+        <img src="assets/zn-labs-logo-inverse.png" alt="ZN Labs" style="height:28px;width:auto;align-self:flex-start">
+        <p style="max-width:26ch;font-family:var(--font-sans);font-size:14px;line-height:var(--lh-body);color:var(--text-inverse-muted)">The tech partner for growing dental practices. Mumbai, India.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+        <span class="zn-eyebrow" style="color:var(--text-inverse-muted)">Site</span>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="#work" style="font-family:var(--font-sans);font-size:14px;color:var(--text-inverse);text-decoration:none">Work</a>
+          <a href="#process" style="font-family:var(--font-sans);font-size:14px;color:var(--text-inverse);text-decoration:none">Process</a>
+          <a href="#pricing" style="font-family:var(--font-sans);font-size:14px;color:var(--text-inverse);text-decoration:none">Pricing</a>
+          <a href="#about" style="font-family:var(--font-sans);font-size:14px;color:var(--text-inverse);text-decoration:none">About</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+        <span class="zn-eyebrow" style="color:var(--text-inverse-muted)">Contact</span>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="tel:+919328548450" style="font:var(--type-mono);font-size:13px;color:var(--text-inverse);text-decoration:none">+91 93285 48450</a>
+          <a href="https://wa.me/919328548450?text=Hi%2C%20I%27d%20like%20a%20free%20audit%20for%20my%20clinic" target="_blank" rel="noopener noreferrer" style="font:var(--type-mono);font-size:13px;color:var(--text-inverse);text-decoration:none">WhatsApp</a>
+          <a href="mailto:zeel.znlabs@gmail.com" style="font:var(--type-mono);font-size:13px;color:var(--text-inverse);text-decoration:none">zeel.znlabs@gmail.com</a>
+          <a href="https://www.linkedin.com/in/zeel-shah-b2a352194/" target="_blank" rel="noopener noreferrer" style="font:var(--type-mono);font-size:13px;color:var(--text-inverse);text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+        <span class="zn-eyebrow" style="color:var(--text-inverse-muted)">Start</span>
+        <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Button" variant="inverse" href="#contact" hint-size="160px,44px">Free clinic audit</x-import>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);justify-content:space-between;margin-top:var(--space-16);padding-top:var(--space-6);border-top:1px solid var(--line-inverse);font-family:var(--font-sans);font-size:12px;color:var(--text-inverse-muted)">
+      <span>© {{ year }} ZN Labs</span>
+      <span>Live in 7 working days, or the build is free.</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;livePreviews&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Work&quot;},&quot;featureFirstCase&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Work&quot;},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;bookingUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  state = { navOpen:false, scales:{}, sent:false, w: typeof window!=='undefined'?window.innerWidth:1280 };
+  frames = [];
+
+  componentDidMount(){
+    this.onResize = () => { this.setState({ w: window.innerWidth }); this.measure(); this.syncNav(); };
+    window.addEventListener('resize', this.onResize);
+    this.tick();
+    this.mo = new MutationObserver(() => { clearTimeout(this._t); this._t = setTimeout(() => this.tick(), 120); });
+    this.mo.observe(document.body, { childList:true, subtree:true });
+    [200,600,1400].forEach(ms => setTimeout(() => this.tick(), ms));
+  }
+  componentDidUpdate(){ this.syncNav(); }
+  componentWillUnmount(){
+    window.removeEventListener('resize', this.onResize);
+    if (this.mo) this.mo.disconnect();
+    if (this.io) this.io.disconnect();
+  }
+
+  tick(){ this.measure(); this.syncNav(); this.setupReveal(); }
+
+  // Nav: no media queries available in inline styles, so toggle the two nav modes by width.
+  syncNav(){
+    const wide = window.innerWidth >= 860;
+    document.querySelectorAll('[data-nav-links]').forEach(el => { el.style.display = wide ? 'flex' : 'none'; });
+    document.querySelectorAll('[data-nav-cta]').forEach(el => { el.style.display = wide ? 'inline-flex' : 'none'; });
+    document.querySelectorAll('[data-nav-burger]').forEach(el => { el.style.display = wide ? 'none' : 'flex'; });
+    if (wide && this.state.navOpen) this.setState({ navOpen:false });
+  }
+
+  measure(){
+    const next = {};
+    this.frames.forEach((el, i) => { if (el && el.clientWidth) next[i] = +(el.clientWidth / 1440).toFixed(4); });
+    if (JSON.stringify(next) !== JSON.stringify(this.state.scales)) this.setState({ scales: next });
+  }
+
+  setupReveal(){
+    if (this.props.revealOnScroll === false) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+    if (!this.io) {
+      this.io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; this.io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -6% 0px' });
+    }
+    document.querySelectorAll('[data-reveal]:not([data-revealed])').forEach(el => {
+      el.setAttribute('data-revealed', '');
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(8px)';
+      el.style.transition = 'opacity 720ms cubic-bezier(.16,.84,.44,1), transform 720ms cubic-bezier(.16,.84,.44,1)';
+      this.io.observe(el);
+    });
+  }
+
+  renderVals(){
+    const live = this.props.livePreviews ?? true;
+    const feature = this.props.featureFirstCase ?? true;
+    const booking = (this.props.bookingUrl ?? '').trim();
+
+    const cases = [
+      { name:'Dr Soham', tagline:'Website redesign', host:'dr-soham-website-redesign.vercel.app',
+        url:'https://dr-soham-website-redesign.vercel.app/',
+        brief:'An existing clinic site that looked dated and read poorly on a phone. Rebuilt for speed, clarity and mobile.',
+        tags:['Redesign','Mobile-first','Speed'] },
+      { name:"Dr Lipsa's Dental Clinic", tagline:'New build', host:'dr-lipsa-website.vercel.app',
+        url:'https://dr-lipsa-website.vercel.app/#home',
+        brief:'A clinic with no web presence at all. Built from scratch with treatment pages, clinic hours and direct call and WhatsApp booking.',
+        tags:['New build','Local SEO','WhatsApp booking'] },
+      { name:'Dent-O-Fit', tagline:'Custom theme and elements', host:'dent-o-fit.vercel.app',
+        url:'https://dent-o-fit.vercel.app/',
+        brief:'A custom visual identity and component system for a practice that wanted to look nothing like a template.',
+        tags:['Custom design','Brand system','UI components'] }
+    ].map((c, i) => ({
+      ...c,
+      span: (feature && i === 0) ? '1 / -1' : 'auto',
+      ref: el => { this.frames[i] = el; },
+      frameStyle: {
+        position:'absolute', top:0, left:0, width:'1440px', height:'900px', border:'0',
+        transform:'scale(' + (this.state.scales[i] || 0.26) + ')', transformOrigin:'top left',
+        pointerEvents:'none', background:'#fff'
+      }
+    }));
+
+    const steps = [
+      { day:'Day 1', title:'Blueprint call', body:'Thirty minutes, ten questions: your specialities, your patients, your look, your booking flow. The last thing we need from you until preview day.' },
+      { day:'Days 2–4', title:'We build', body:'Structure, copy, design, mobile first. Nothing needed from your side.' },
+      { day:'Day 5', title:'Preview', body:'You see the real site on a live link. One consolidated round of changes.' },
+      { day:'Day 6', title:'Refine and sync', body:'Changes applied. Google Business Profile updated to match: hours, photos, services.' },
+      { day:'Day 7', title:'Go live', body:'Domain connected, analytics running, logins handed to you, plus a short video showing how to update the basics yourself.' }
+    ];
+
+    const faqs = [
+      { question:'Seven days, really?', answer:'Yes. Seven working days from the blueprint call. We write the copy so nothing waits on you. If we miss it, the build is free.' },
+      { question:'What do you need from me?', answer:'Thirty minutes on a call, and a look at the preview on day five. That is it.' },
+      { question:'Do I own the website?', answer:'Yes. Domain, hosting and logins are all in your name and handed over on day seven.' },
+      { question:'What if I already have a website?', answer:"We audit it first. Sometimes a redesign is the answer, sometimes fixing your Google profile matters more. We will tell you which." }
+    ];
+
+    return {
+      cases, steps, faqs, live,
+      year: new Date().getFullYear(),
+      navOpen: this.state.navOpen,
+      burgerIcon: this.state.navOpen ? 'x' : 'menu',
+      toggleNav: () => this.setState(s => ({ navOpen: !s.navOpen })),
+      closeNav: () => this.setState({ navOpen:false }),
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      submit: e => { e.preventDefault(); this.setState({ sent:true }); },
+      bookingHref: booking || 'https://wa.me/919328548450?text=Hi%2C%20I%27d%20like%20a%20free%20audit%20for%20my%20clinic',
+      yes: true, four: 4, eighteen: 18, twenty: 20, twentyeight: 28
+    };
+  }
+}
+</script>
+</body>
+</html>

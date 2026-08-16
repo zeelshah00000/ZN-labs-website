@@ -1,0 +1,4 @@
+/* ZN Labs webfonts — served from Google Fonts CDN.
+   Display: Newsreader (editorial serif). UI/Body: Instrument Sans (neo-grotesk). Mono: JetBrains Mono.
+   These are SUBSTITUTIONS chosen to match the reference aesthetic; no licensed brand fonts were supplied. */
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..600;1,6..72,200..500&family=Instrument+Sans:ital,wght@0,400..700;1,400..600&family=JetBrains+Mono:wght@400;500&display=swap");
