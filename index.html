@@ -713,8 +713,8 @@ a:hover{color:var(--text-link-hover)}
         <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
           <div style="display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-8) 0;text-align:center;align-items:center">
             <x-import component-from-global-scope="ZNLabsDesignSystem_f60c1a.Icon" name="check" size="{{ twentyeight }}" hint-size="28px,28px"></x-import>
-            <h3 style="font:var(--type-title)">Got it. We will be in touch.</h3>
-            <p style="font-family:var(--font-sans);font-size:15px;color:var(--text-body);max-width:36ch">Your audit lands within two working days. If it is urgent, WhatsApp is faster.</p>
+            <h3 style="font:var(--type-title)">Almost done — send the WhatsApp message.</h3>
+            <p style="font-family:var(--font-sans);font-size:15px;color:var(--text-body);max-width:36ch">We just opened WhatsApp with your details filled in. Hit send there and your audit lands within two working days.</p>
           </div>
         </sc-if>
         <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
@@ -841,7 +841,21 @@ class Component extends DCLogic {
       closeNav: () => this.setState({ navOpen:false }),
       sent: this.state.sent,
       notSent: !this.state.sent,
-      submit: e => { e.preventDefault(); this.setState({ sent:true }); },
+      submit: e => {
+        e.preventDefault();
+        const fd = new FormData(e.target);
+        const get = k => (fd.get(k) || '').toString().trim();
+        const lines = [
+          "Hi, I'd like a free clinic audit.",
+          'Name: ' + get('name'),
+          'Clinic: ' + get('clinic'),
+          'City: ' + get('city'),
+          'Phone: ' + get('phone'),
+          get('problem') ? ('Problem: ' + get('problem')) : null
+        ].filter(Boolean).join('\n');
+        window.open('https://wa.me/919328548450?text=' + encodeURIComponent(lines), '_blank', 'noopener,noreferrer');
+        this.setState({ sent:true });
+      },
       bookingHref: booking || 'https://wa.me/919328548450?text=Hi%2C%20I%27d%20like%20a%20free%20audit%20for%20my%20clinic',
       yes: true, four: 4, eighteen: 18, twenty: 20, twentyeight: 28
     };
